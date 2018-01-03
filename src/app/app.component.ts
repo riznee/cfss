@@ -9,6 +9,7 @@ import {Appointmentpage}from '../pages/appointment/appointment';
 import {Newspage}from '../pages/news/news';
 import {Doctorpage}from '../pages/doctor/doctor';
 import {Settingpage}from '../pages/setting/setting';
+import {Dairypage}from '../pages/dairy/dairy';
 
 
 @Component({
@@ -29,6 +30,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Diet', component: Dietpage},
       { title: 'Appointment', component: Appointmentpage},
+      { title: 'Dairy', component: Dairypage},
       { title: 'News', component: Newspage},
       { title: 'Doctor', component: Doctorpage},
       { title: 'Setting', component: Settingpage}

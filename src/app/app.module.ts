@@ -16,7 +16,7 @@ import {Appointmentpage}from '../pages/appointment/appointment';
 import {Newspage}from '../pages/news/news';
 import {Doctorpage}from '../pages/doctor/doctor';
 import {Settingpage}from '../pages/setting/setting';
-
+import {Dairypage}from '../pages/dairy/dairy';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import {Settingpage}from '../pages/setting/setting';
     Appointmentpage,
     Newspage,
     Doctorpage,
-    Settingpage
+    Settingpage,
+    Dairypage
 
   ],
   imports: [
@@ -41,7 +42,8 @@ import {Settingpage}from '../pages/setting/setting';
     Appointmentpage,
     Newspage,
     Doctorpage,
-    Settingpage
+    Settingpage,
+    Dairypage
   ],
   providers: [
     StatusBar,
