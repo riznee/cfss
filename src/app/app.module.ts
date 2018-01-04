@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 /* own file
 */
+import { DietService } from '../services/diet.service';
 import { Dietpage } from '../pages/diet/diet';
 import {Appointmentpage}from '../pages/appointment/appointment';
 import {Newspage}from '../pages/news/news';
@@ -48,6 +49,7 @@ import {Dairypage}from '../pages/dairy/dairy';
   providers: [
     StatusBar,
     SplashScreen,
+    DietService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
