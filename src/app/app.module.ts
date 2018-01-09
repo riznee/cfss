@@ -11,13 +11,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 /* own file
 */
-import { DietService } from '../services/diet.service';
+//import { DietService } from '../services/diet.service';
 import { Dietpage } from '../pages/diet/diet';
 import {Appointmentpage}from '../pages/appointment/appointment';
 import {Newspage}from '../pages/news/news';
 import {Doctorpage}from '../pages/doctor/doctor';
 import {Settingpage}from '../pages/setting/setting';
 import {Dairypage}from '../pages/dairy/dairy';
+import { DataProvider } from '../providers/data/data';
+//import {Addappoitment} from '../pages/appointment/addappoint/addappoint';
+
+
 
 @NgModule({
   declarations: [
@@ -28,12 +32,14 @@ import {Dairypage}from '../pages/dairy/dairy';
     Newspage,
     Doctorpage,
     Settingpage,
-    Dairypage
+    Dairypage,
+    //Addappoitment
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,13 +50,16 @@ import {Dairypage}from '../pages/dairy/dairy';
     Newspage,
     Doctorpage,
     Settingpage,
-    Dairypage
+    Dairypage,
+  //  Addappoitment
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    DietService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+
+
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider
   ]
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { DietService } from '../../services/diet.service';
+//import { DietService } from '../../services/diet.service';
 
 @Component({
   selector: 'diet',
@@ -8,8 +8,8 @@ import { DietService } from '../../services/diet.service';
 })
 export class Dietpage {
   public diets;
-  constructor(public navCtrl: NavController, public dietService: DietService) {
-    this.diets = dietService.getList();
-  }
+  constructor(public navCtrl: NavController) {
+  };
+
 
 }

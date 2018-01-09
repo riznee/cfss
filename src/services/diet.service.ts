@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
-import { AbstractStorageService } from './abstract.storage.service';
+//import { AbstractStorageService } from './abstract.storage.service';
+import {NativeStorage} from '@ionic-native/native-storage';
+
+const STORAGE_KEY"recipe";
 
 @Injectable()
+
+
+
+
 
 export class DietService extends AbstractStorageService {
   protected type: string = 'diet';
 
-  constructor() {
-    let diets = [
-      {
-        id: 1,
-        name: 'Banana',
-        calories: 234
-      },
-      {
-        id: 2,
-        name: 'Apple',
-        calories: 233
-      }
-    ];
+  constructor( public storage:Storage){ }
 
-    this.storeList(diets);
+  getAllrecipe(){
+    return this.storage.gets(STORAGE_KEY);
   }
 
-  
+  addrecipe(){
+
+  }
+
+
 }
