@@ -12,11 +12,25 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 /* own file
 */
 import { Dietpage } from '../pages/diet/diet';
+
+
+
 import {Appointmentpage}from '../pages/appointment/appointment';
+import {Appointmentviewpage} from '../pages/appointmentview/appointmentview';
+import {Appointmentaddpage} from '../pages/appointmentadd/appointmentadd';
+
 import {Newspage}from '../pages/news/news';
 import {Doctorpage}from '../pages/doctor/doctor';
 import {Settingpage}from '../pages/setting/setting';
 import {Dairypage}from '../pages/dairy/dairy';
+
+
+
+
+
+import { IonicStorageModule } from '@ionic/storage';
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -27,12 +41,16 @@ import {Dairypage}from '../pages/dairy/dairy';
     Newspage,
     Doctorpage,
     Settingpage,
-    Dairypage
+    Dairypage,
+    Appointmentaddpage,
+
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,7 +61,8 @@ import {Dairypage}from '../pages/dairy/dairy';
     Newspage,
     Doctorpage,
     Settingpage,
-    Dairypage
+    Dairypage,
+    Appointmentaddpage
   ],
   providers: [
     StatusBar,

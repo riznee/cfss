@@ -1,14 +1,55 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ModalController, NavController } from 'ionic-angular';
+import {Appointmentaddpage} from '../appointmentadd/appointmentadd';
+import {Appointmentviewpage} from '../appointmentview/appointmentview';
+
+
 
 @Component({
   selector: 'page-appointment',
   templateUrl: 'appointment.html'
 })
 export class Appointmentpage {
-
-  constructor(public navCtrl: NavController) {
+  public items = [];
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
 
-};
+  ionViewDidLoad(){
+
+    this.items = [
+      {title: 'hi1', description: 'test1'},
+      {title: 'hi2', description: 'test2'},
+      {title: 'hi3', description: 'test3'}
+    ];
+  }
+
+  addappoint(){
+
+    let addModal = this.modalCtrl.create(Appointmentaddpage);
+
+    addModal.onDidDismiss((item) => {
+
+          if(item){
+            this.saveItem(item);
+          }
+
+    });
+
+
+    addModal.present();
+
+  }
+
+  saveItem(item){
+    this.items.push(item);
+  }
+
+
+  viewItem(item){
+  this.navCtrl.push(Appointmentviewpage, {
+    item: item
+  });
+}
+
+}
