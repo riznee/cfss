@@ -20,7 +20,7 @@ export class Appointmentaddpage {
   saveItem(){
 
     let newItem = {
-      title: this.title,
+      appointmenttype: this.appointmenttype,
       description: this.description,
       datez: this.datez
     };

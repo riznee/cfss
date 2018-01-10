@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import {Appointmentaddpage} from '../appointmentadd/appointmentadd';
 import {Appointmentviewpage} from '../appointmentview/appointmentview';
 
@@ -11,6 +14,7 @@ import {Appointmentviewpage} from '../appointmentview/appointmentview';
 })
 export class Appointmentpage {
   public items = [];
+
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
@@ -18,9 +22,9 @@ export class Appointmentpage {
   ionViewDidLoad(){
 
     this.items = [
-      {title: 'hi1', description: 'test1'},
-      {title: 'hi2', description: 'test2'},
-      {title: 'hi3', description: 'test3'}
+      {appointmenttype: 'hi1', description: 'test1'},
+      {appointmenttype: 'hi2', description: 'test2'},
+      {appointmenttype: 'hi3', description: 'test3'}
     ];
   }
 
