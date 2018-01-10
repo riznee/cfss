@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 /* own file
 */
+//import { DietService } from '../services/diet.service';
 import { Dietpage } from '../pages/diet/diet';
 
 
@@ -23,6 +24,10 @@ import {Newspage}from '../pages/news/news';
 import {Doctorpage}from '../pages/doctor/doctor';
 import {Settingpage}from '../pages/setting/setting';
 import {Dairypage}from '../pages/dairy/dairy';
+import { DataProvider } from '../providers/data/data';
+//import {Addappoitment} from '../pages/appointment/addappoint/addappoint';
+
+
 
 
 
@@ -42,15 +47,23 @@ import { HttpModule } from '@angular/http';
     Doctorpage,
     Settingpage,
     Dairypage,
+<<<<<<< HEAD
     Appointmentaddpage,
 
+=======
+    //Addappoitment
+>>>>>>> 97ba2f39e96ec0880c86d69c3bade89acbe8b9ad
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+<<<<<<< HEAD
     IonicStorageModule.forRoot(),
     HttpModule,
+=======
+
+>>>>>>> 97ba2f39e96ec0880c86d69c3bade89acbe8b9ad
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -62,12 +75,19 @@ import { HttpModule } from '@angular/http';
     Doctorpage,
     Settingpage,
     Dairypage,
+<<<<<<< HEAD
     Appointmentaddpage
+=======
+  //  Addappoitment
+>>>>>>> 97ba2f39e96ec0880c86d69c3bade89acbe8b9ad
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+
+
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider
   ]
 })
 export class AppModule {}

@@ -8,6 +8,17 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Diet</h3>
-  
+  <button ion-button outline item-end icon-left >
+    <ion-icon name="ios-add-circle"></ion-icon>
+  </button>
+  <ion-item-group *ngFor="let diet of diets">
+  <ion-item > Name:{{diet.name}} <br> calories:{{diet.calories}}<br>
+  <button ion-button outline item-end icon-left >
+  <ion-icon name="ios-paper"> </ion-icon> </button>
+  <button ion-button outline item-end icon-left >
+   <ion-icon name="ios-remove-circle"> </ion-icon> </button>
+</ion-item>
+
+  </ion-item-group>
+
 </ion-content>

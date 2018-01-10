@@ -1,12 +1,15 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Appointments</ion-title>
+  <ion-navbar color="secondary">
+    <ion-title>
+    Appointments
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
+<<<<<<< HEAD
 <ion-content padding>
 <button ion-button icon-only (click)="addappoint()"><ion-icon name="add-circle"></ion-icon></button>
 <ion-item-group>
@@ -14,5 +17,10 @@
 </ion-item-group>
 <ion-list>
     <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.appointmenttype}}</ion-item>
+=======
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="viewItem(item)">{{item.title}}</ion-item>
+>>>>>>> 97ba2f39e96ec0880c86d69c3bade89acbe8b9ad
   </ion-list>
 </ion-content>
